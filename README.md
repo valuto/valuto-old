@@ -33,6 +33,15 @@ You are welcome to mine VLU, even when the diff is low and reward is high. But r
 
 V-Market(working name) is going to be, the biggest crypto powered marketplace on the vanilla web. Think Amazon, but with the added bonus of using a crypto currrency and having 100% safe escrow. 
 
+Compiling binary for *nix
+-------
+In Ubuntu you need the following dependencies:
+
+``` 
+sudo apt-get install build-essential libboost-all-dev libcurl4-openssl-dev libdb5.3-dev libdb5.3++-dev git qt-sdk libminiupnpc-dev libssl-dev
+
+``` 
+
 Marketplace - Huh?
 -------
 
