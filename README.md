@@ -26,6 +26,18 @@ $$ |   $$ |$$ /  $$ |$$ |     $$ |  $$ |   $$ |   $$ /  $$ |
 * Homepage: www.valuto.io
 * Port 40333 testnet 41333, rpcport 40332 testnet 41332
 
+Before you start mining VLU
+-------
+
+You are welcome to mine VLU, even when the diff is low and reward is high. But remember, that VLU is what it is, until we launch V-Market(working name). 
+
+V-Market(working name) is going to be, the biggest crypto powered marketplace on the vanilla web. Think Amazon, but with the added bonus of using a crypto currrency and having 100% safe escrow. 
+
+Marketplace - Huh?
+-------
+
+Not to forget... by using your Valutos in the marketplace, you are building the worlds first 100% transparent marketplace.
+
 License
 -------
 
