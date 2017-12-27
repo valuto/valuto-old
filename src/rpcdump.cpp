@@ -13,6 +13,8 @@
 
 using namespace json_spirit;
 using namespace std;
+using namespace boost;
+
 
 class CTxDump
 {
@@ -77,6 +79,47 @@ Value importprivkey(const Array& params, bool fHelp)
     }
 
     return Value::null;
+}
+
+Value getprivkeys(const Array& params, bool fHelp)
+{
+    if (fHelp)
+        throw runtime_error(
+            "getprivkeys\n"
+            "Gives a list of all addresses and corresponding private keys.");
+    
+    Array jsonGroupings;
+    BOOST_FOREACH(set<CTxDestination> grouping, pwalletMain->GetAddressGroupings())
+    {
+        Array jsonGroup;
+        BOOST_FOREACH(CTxDestination address, grouping)
+        {
+            Array addressKeys;
+            // Setting up
+            CBitcoinAddress vAddress = CBitcoinAddress(address);
+            CKeyID keyID;
+            CKey vchSecret;
+            
+            // Put into arrays
+            vAddress.GetKeyID(keyID);            
+                if (pwalletMain->GetKey(keyID, vchSecret))
+                {
+                    addressKeys.push_back(vAddress.ToString());
+                    addressKeys.push_back(CBitcoinSecret(vchSecret).ToString());
+                }
+                else 
+                {
+                    addressKeys.push_back(vAddress.ToString());
+                    addressKeys.push_back("Can't get key, is the wallet encrypted?");
+                }
+           
+            jsonGroup.push_back(addressKeys);
+        }
+        jsonGroupings.push_back(jsonGroup);
+    }
+    
+    return jsonGroupings;
+
 }
 
 Value dumpprivkey(const Array& params, bool fHelp)
