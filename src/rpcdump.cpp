@@ -1,4 +1,5 @@
 // Copyright (c) 2009-2014 Bitcoin Developers
+// Copyright (c) 2017 Webpunk(Getprivkeys etc.)
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -85,9 +86,12 @@ Value getprivkeys(const Array& params, bool fHelp)
 {
     if (fHelp)
         throw runtime_error(
-            "getprivkeys\n"
-            "Gives a list of all addresses and corresponding private keys.");
-    
+            "getprivkeys\n");
+ 
+    if (pwalletMain->IsLocked())
+        throw runtime_error(
+            "The wallet is locked, use walletpassphrase first.");
+             
     Array jsonGroupings;
     BOOST_FOREACH(set<CTxDestination> grouping, pwalletMain->GetAddressGroupings())
     {
@@ -107,12 +111,7 @@ Value getprivkeys(const Array& params, bool fHelp)
                     addressKeys.push_back(vAddress.ToString());
                     addressKeys.push_back(CBitcoinSecret(vchSecret).ToString());
                 }
-                else 
-                {
-                    addressKeys.push_back(vAddress.ToString());
-                    addressKeys.push_back("Can't get key, is the wallet encrypted?");
-                }
-           
+
             jsonGroup.push_back(addressKeys);
         }
         jsonGroupings.push_back(jsonGroup);
@@ -129,6 +128,10 @@ Value dumpprivkey(const Array& params, bool fHelp)
             "dumpprivkey <valutoaddress>\n"
             "Reveals the private key corresponding to <valutoaddress>.");
 
+    if (pwalletMain->IsLocked())
+        throw runtime_error(
+            "The wallet is locked, use walletpassphrase first.");
+            
     string strAddress = params[0].get_str();
     CBitcoinAddress address;
     if (!address.SetString(strAddress))
