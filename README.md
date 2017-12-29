@@ -31,7 +31,7 @@ Before you start mining VLU
 
 You are welcome to mine VLU, even when the diff is low and reward is high. But remember, that VLU is what it is, until we launch V-Market(working name). 
 
-V-Market(working name) is going to be, the biggest crypto powered marketplace on the vanilla web. Think Amazon, but with the added bonus of using a crypto currrency and having 100% safe escrow. 
+V-Market(working name) is going to be, the biggest crypto powered marketplace on the vanilla web. Think Amazon(In functionality, not size), but with the added bonus of using a crypto currrency and having 100% safe escrow. 
 
 Compiling binary for *nix
 -------
@@ -42,10 +42,16 @@ sudo apt-get install build-essential libboost-all-dev libcurl4-openssl-dev libdb
 
 ``` 
 
+Where is the GUI?
+-------
+
+The GUI for valutod is currently under development. It is being coded in python/kivy to be crossplatform and "nice" to the eye.
+
+
 Marketplace - Huh?
 -------
 
-Not to forget... by using your Valutos in the marketplace, you are building the worlds first 100% transparent marketplace.
+Not to forget... by using your Valutos in the marketplace, you are building the worlds first 100% community driven marketplace.
 
 License
 -------
