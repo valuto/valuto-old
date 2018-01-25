@@ -1172,19 +1172,21 @@ void MapPort(bool)
 // Each pair gives a source name and a seed name.
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
-static const char *strMainNetDNSSeed[][2] = {
-    {"valutotools.com", "88.99.171.23"},
+static const char *strMainNetDNSSeed[][3] = {
+    {"valuto.io", "dnsseed.valuto.io"},
+    {"valutotools.com", "dnsseed.valutotools.com"},
     {NULL, NULL}
 };
 
-static const char *strTestNetDNSSeed[][2] = {
-    {"valutotools.com", "88.99.171.23"},
+static const char *strTestNetDNSSeed[][3] = {
+    {"valuto.io", "test-dnsseed.valuto.io"},
+    {"valutotools.com", "test-dnsseed.valutotools.com"},
     {NULL, NULL}
 };
 
 void ThreadDNSAddressSeed()
 {
-    static const char *(*strDNSSeed)[2] = fTestNet ? strTestNetDNSSeed : strMainNetDNSSeed;
+    static const char *(*strDNSSeed)[3] = fTestNet ? strTestNetDNSSeed : strMainNetDNSSeed;
 
     int found = 0;
 
