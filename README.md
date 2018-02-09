@@ -53,6 +53,14 @@ Marketplace - Huh?
 
 Not to forget... by using your Valutos in the marketplace, you are building the worlds first 100% community driven marketplace.
 
+
+Valutowallet
+-------
+
+An online wallet is available at https://valutowallet.com
+The source code for the online wallet can be found at https://github.com/valuto/valutowallet
+
+
 License
 -------
 
