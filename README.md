@@ -58,6 +58,7 @@ Valutowallet
 -------
 
 An online wallet is available at https://valutowallet.com
+
 The source code for the online wallet can be found at https://github.com/valuto/valutowallet
 
 
