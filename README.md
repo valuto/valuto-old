@@ -29,29 +29,41 @@ $$ |   $$ |$$ /  $$ |$$ |     $$ |  $$ |   $$ |   $$ /  $$ |
 Before you start mining VLU
 -------
 
-You are welcome to mine VLU, even when the diff is low and reward is high. But remember, that VLU is what it is, until we launch V-Market(working name). 
+You are welcome to mine VLU, even when the diff is low and reward is high. But remember, that VLU is what it is, until we launch VLU Market. 
 
-V-Market(working name) is going to be, the biggest crypto powered marketplace on the vanilla web. Think Amazon(In functionality, not size), but with the added bonus of using a crypto currrency and having 100% safe escrow. 
+VLU Market is going to be the biggest crypto powered marketplace on the vanilla web. Think Amazon (in functionality, not size), but with the added bonus of using a crypto currency and having 100 % safe escrow. 
 
 Compiling binary for *nix
 -------
 In Ubuntu you need the following dependencies:
 
 ``` 
-sudo apt-get install build-essential libboost-all-dev libcurl4-openssl-dev libdb5.3-dev libdb5.3++-dev git qt-sdk libminiupnpc-dev libssl-dev
-
+sudo apt-get install build-essential libboost-all-dev libcurl4-openssl-dev libdb5.3-dev libdb5.3++-dev libminiupnpc-dev libssl-dev
 ``` 
+
+Clone source from this Git repository and change directory to the `src/` folder.
+
+Start compiling using:
+
+```
+make -f makefile.unix
+```
+
+If you enjoy not spending time compiling, you can have a look at our (Docker container)[https://github.com/valuto/docker-valutod] or our (binary releases)[https://github.com/valuto/valuto/releases].
+
 
 Where is the GUI?
 -------
 
-The GUI for valutod is currently under development. It is being coded in python/kivy to be crossplatform and "nice" to the eye.
+The GUI for valutod is currently under development in the form of ValutoPy. A beta version of ValutoPy is available from http://downloads.valuto.io/ValutoPy_Beta_Setup.exe.
 
 
-Marketplace - Huh?
+Marketplace
 -------
 
-Not to forget... by using your Valutos in the marketplace, you are building the worlds first 100% community driven marketplace.
+By using your VLU in the marketplace, you are building the worlds first marketplace using 100 % decentralized payment system.
+
+Sign up on (VLUMarket.com)[http://vlumarket.com] to receive a notification when VLU Market goes live.
 
 
 Valutowallet
