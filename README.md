@@ -49,7 +49,7 @@ Start compiling using:
 make -f makefile.unix
 ```
 
-If you enjoy not spending time compiling, you can have a look at our (Docker container)[https://github.com/valuto/docker-valutod] or our (binary releases)[https://github.com/valuto/valuto/releases].
+If you enjoy not spending time compiling, you can have a look at our [Docker container](https://github.com/valuto/docker-valutod) or our [binary releases](https://github.com/valuto/valuto/releases).
 
 
 Where is the GUI?
@@ -63,7 +63,7 @@ Marketplace
 
 By using your VLU in the marketplace, you are building the worlds first marketplace using 100 % decentralized payment system.
 
-Sign up on (VLUMarket.com)[http://vlumarket.com] to receive a notification when VLU Market goes live.
+Sign up on [VLUMarket.com](http://vlumarket.com) to receive a notification when VLU Market goes live.
 
 
 Valutowallet
